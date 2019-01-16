@@ -46,7 +46,18 @@ func TestSharedBuckets(t *testing.T) {
 }
 
 func TestCreateBucket(t *testing.T) {
-	if err := manager.Create("test", "z1"); err != nil {
+	if err := manager.CreateBucket("test", "z1"); err != nil {
 		t.Fatalf("Create() error, [%d]:%s", responseCode(err), err)
+	}
+}
+
+func TestBucketExists(t *testing.T) {
+	exist, err := manager.BucketExists("test")
+	if err != nil {
+		t.Fatalf("Create() error, [%d]:%s", responseCode(err), err)
+	}
+
+	if !exist {
+		t.Fatalf("Bucket test should exists, but not")
 	}
 }

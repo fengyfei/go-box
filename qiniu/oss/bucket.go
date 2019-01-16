@@ -30,14 +30,30 @@ func (m *Manager) requsetHost() string {
 	return m.Cfg.RsReqHost()
 }
 
-// Create a bucket by the given name.
+// BucketExists checks if a bucket already exists.
+func (m *Manager) BucketExists(name string) (bool, error) {
+	buckets, err := m.Buckets(true)
+	if err != nil {
+		return false, err
+	}
+
+	for _, bucket := range buckets {
+		if bucket == name {
+			return true, nil
+		}
+	}
+
+	return false, nil
+}
+
+// CreateBucket a bucket by the given name.
 // zone values
 // 	z0 华东
 // 	z1 华北
 // 	z2 华南
 // 	na0 北美
 // 	as0 东南亚
-func (m *Manager) Create(name, zone string) error {
+func (m *Manager) CreateBucket(name, zone string) error {
 	if zone == "" {
 		zone = "z0"
 	}
