@@ -1,0 +1,7 @@
+package: github.com/fengyfei/go-box
+import:
+- package: github.com/qiniu/api.v7
+  version: v7.2.5
+- package: golang.org/x/net
+  subpackages:
+  - context
