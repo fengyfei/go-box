@@ -1,29 +1,18 @@
-hash: 2ba5e7a93c8c4f5ea55d7bf6657f8b5806b52801a5ae844acdd7a9eca8da4bbb
-updated: 2019-01-20T14:34:12.709534+08:00
+hash: 05df7c714131d10287f8323a517632cdc9874226f2f2ebc8967c8d572818a514
+updated: 2019-01-22T17:50:37.874976+08:00
 imports:
 - name: github.com/json-iterator/go
   version: 1624edc4454b8682399def8740d46db5e4362ba4
 - name: github.com/qiniu/api.v7
   version: bc6998c1186aafa0eadc6396d28fc7e77a594a2a
-  subpackages:
-  - auth/qbox
-  - conf
-  - storage
-- name: github.com/qiniu/x
-  version: f512abcf45ab4e2ba0fd4784c57b53d495997d66
-  subpackages:
-  - bytes.v7
-  - bytes.v7/seekable
-  - reqid.v7
-  - xlog.v7
+- name: github.com/shirou/gopsutil
+  version: ccc1c1016bc5d10e803189ee43417c50cdde7f1b
 - name: golang.org/x/net
   version: ed066c81e75eba56dd9bd2139ade88125b855585
   subpackages:
   - context
-- name: qiniupkg.com/x
-  version: f512abcf45ab4e2ba0fd4784c57b53d495997d66
+- name: golang.org/x/sys
+  version: 054c452bb702e465e95ce8e7a3d9a6cf0cd1188d
   subpackages:
-  - bytes.v7
-  - log.v7
-  - reqid.v7
+  - unix
 testImports: []
